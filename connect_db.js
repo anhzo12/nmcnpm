@@ -30,12 +30,11 @@ function demoCreateASeller(){
             // "chat performance":"99%",
             "joined ":{"$date":{"$numberLong":new Date()}}
         }
-        // seller.insertOne(data, function(err,res){
-        //     if (err) throw err;
-        //     console.log('Them thanh cong');
-        //     db.close();
-        // });
-        // db.close();
+        seller.insertOne(data, function(err,res){
+            if (err) throw err;
+            console.log('Them thanh cong');
+            db.close();
+        });
     });
 }
 
